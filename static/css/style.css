@@ -576,3 +576,13 @@ button.secondary {
         font-size: 2rem;
     }
 }
+
+.credit {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    opacity: 0.7;
+    font-style: italic;
+    padding: 10px 0;
+}
