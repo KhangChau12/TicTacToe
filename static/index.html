@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minimax Tic-Tac-Toe AI</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div id="loading" class="loading">
+        <div class="loading-spinner"></div>
+        <div>LOADING AI ENGINE...</div>
+    </div>
+
+    <div class="container">
+        <header>
+            <h1>MINIMAX TIC-TAC-TOE</h1>
+            <div class="subtitle">Challenge the Unbeatable AI</div>
+        </header>
+
+        <div class="game-container">
+            <div class="status" id="status">You play X, AI plays O - Your turn</div>
+            <div class="board" id="board"></div>
+            
+            <div class="difficulty-container">
+                <div class="difficulty-labels">
+                    <span>Easy</span>
+                    <span>Medium</span>
+                    <span>Hard</span>
+                    <span>Expert</span>
+                    <span>Invincible</span>
+                </div>
+                <input type="range" min="1" max="5" value="3" class="difficulty-slider" id="difficulty-slider">
+                <div class="difficulty-description" id="difficulty-description">
+                    Hard: AI rarely makes mistakes and looks 5 moves ahead
+                </div>
+            </div>
+            
+            <div class="stats">
+                <div class="stat-item">
+                    <div>WINS</div>
+                    <div class="stat-value" id="wins">0</div>
+                </div>
+                <div class="stat-item">
+                    <div>DRAWS</div>
+                    <div class="stat-value" id="draws">0</div>
+                </div>
+                <div class="stat-item">
+                    <div>LOSSES</div>
+                    <div class="stat-value" id="losses">0</div>
+                </div>
+            </div>
+            
+            <div class="controls">
+                <button id="new-game">NEW GAME</button>
+                <button id="ai-first" class="secondary">LET AI GO FIRST</button>
+            </div>
+        </div>
+
+        <div class="settings">
+            <h2>ABOUT THE AI <div class="tooltip"><span>?</span><span class="tooltiptext">The Minimax algorithm examines all possible moves and chooses the optimal one. Unlike Q-learning, Minimax works perfectly without training.</span></div></h2>
+            <p>This AI uses the Minimax algorithm with Alpha-Beta pruning, an optimal method for 3x3 tic-tac-toe.</p>
+            <p>At the highest difficulty, the AI cannot be defeated - it will always win or draw.</p>
+            <p>The Minimax algorithm predicts all possible moves and selects the optimal one, assuming the opponent also plays optimally.</p>
+            <p><strong>Tip:</strong> If you want a chance to win, choose difficulty 1 or 2. At difficulty 3, the AI occasionally makes minor mistakes. At difficulties 4-5, your best chance is a draw!</p>
+        </div>
+    </div>
+
+    <script src="/static/js/game.js"></script>
+</body>
+</html>
